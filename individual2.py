@@ -12,6 +12,7 @@ import sys
 import os.path
 
 if __name__ == "__main__":
+    count = 0
     n = int(input("Input count of lines "))
     if n <= 0:
         print("Wrong number")
@@ -19,8 +20,12 @@ if __name__ == "__main__":
     check = os.path.exists(sys.argv[1])
     if check:
         with open(sys.argv[1], "r") as txt:
-            lines = [next(txt) for x in range(n)]
-            for line in lines:
+            content = txt.readlines()
+            for line in content:
+                count += 1
+                if count == n:
+                    exit()
                 print(line)
+                
     else:
         print("File not exist")
