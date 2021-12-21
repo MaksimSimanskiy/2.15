@@ -13,6 +13,7 @@
 import sys
 import os.path
 
+
 if __name__ == "__main__":
     count = 0
     n = int(input("Input count of lines "))
