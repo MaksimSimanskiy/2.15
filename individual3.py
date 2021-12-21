@@ -9,6 +9,7 @@
 
 import os
 
+
 if __name__ == "__main__":
     with open("newfile.txt", "w") as data:
         data.write(os.environ['PROCESSOR_ARCHITECTURE'] + '\n')
