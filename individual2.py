@@ -17,18 +17,14 @@ import os.path
 if __name__ == "__main__":
     count = 0
     n = int(input("Input count of lines "))
-    if n <= 0:
-        print("Wrong number")
-        exit()
+    if n == "":
+        raise TypeError("Wrong type - input number")
     check = os.path.exists(sys.argv[1])
     if check:
         with open(sys.argv[1], "r") as txt:
             content = txt.readlines()
             for line in content:
                 count += 1
-                if count == n:
-                    exit()
                 print(line)
-                
     else:
-        print("File not exist")
+        raise Exception("File not exist")
