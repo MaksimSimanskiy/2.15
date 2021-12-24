@@ -15,7 +15,6 @@ import os.path
 
 
 if __name__ == "__main__":
-    count = 0
     n = int(input("Input count of lines "))
     if n == "":
         raise TypeError("Wrong type - input number")
@@ -24,7 +23,6 @@ if __name__ == "__main__":
         with open(sys.argv[1], "r") as txt:
             content = txt.readlines()
             for line in content:
-                count += 1
                 print(line)
     else:
-        raise Exception("File not exist or not set argument")
+        raise ExistError("File not exist or not set argument")
