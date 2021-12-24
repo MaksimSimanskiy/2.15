@@ -27,4 +27,4 @@ if __name__ == "__main__":
                 count += 1
                 print(line)
     else:
-        raise Exception("File not exist")
+        raise Exception("File not exist or not set argument")
