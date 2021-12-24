@@ -10,7 +10,11 @@
 if __name__ == "__main__":
     list = []
     with open("ind.txt", "r") as txt:
+        # running a for loop
         content = txt.readlines()
         content.reverse()
+        count = 0
         for line in content:
-            print(line)
+            if count != 3:
+                count += 1
+                print(line)
